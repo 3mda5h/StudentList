@@ -21,10 +21,10 @@ struct Student
 void add(vector<Student*> &pointers);
 void print(vector<Student*> &pointers);
 void remove(vector<Student*> &pointers);
-char input[100];
 
 int main()
 { 
+  char input[100];
   vector <Student*> pointers;
   bool running = true;
   while(running == true)
@@ -53,7 +53,7 @@ int main()
     }
     else if(strcmp(input, "DELETE") == 0)
     {
-      remove(pointers);
+      remove(pointers, input);
     }
     else if(strcmp(input, "QUIT") == 0)
     {
@@ -93,7 +93,7 @@ void print(vector<Student*> &pointers)
 }
 
 //deletes a student pointer from the vector of pointers
-void remove(vector<Student*> &pointers)
+void remove(vector<Student*> &pointers, char input[])
 { 
   cout << "Enter student ID" << endl;
   cin >> input;
