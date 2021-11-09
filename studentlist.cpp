@@ -20,7 +20,7 @@ struct Student
 
 void add(vector<Student*> &pointers);
 void print(vector<Student*> &pointers);
-void remove(vector<Student*> &pointers);
+void remove(vector<Student*> &pointers, char input[]);
 
 int main()
 { 
